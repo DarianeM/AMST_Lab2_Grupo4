@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PerfilUsuario extends AppCompatActivity {
-    TextView txt_id, txt_name, txt_email;
+    TextView txt_phone, txt_name, txt_email, txt_id;
     ImageView imv_photo;
     DatabaseReference db_reference;
 
@@ -33,6 +33,7 @@ public class PerfilUsuario extends AppCompatActivity {
         HashMap<String, String> info_user = (HashMap<String, String>) intent.getSerializableExtra("info_user");
         System.out.println("Informacion"+ info_user);
         txt_id = findViewById(R.id.txt_userId);
+        txt_phone = findViewById(R.id.txt_userPhone);
         txt_name = findViewById(R.id.txt_nombre);
         txt_email = findViewById(R.id.txt_correo);
         imv_photo = findViewById(R.id.imv_foto);
@@ -41,6 +42,7 @@ public class PerfilUsuario extends AppCompatActivity {
         txt_id.setText(info_user.get("user_id"));
         txt_name.setText(info_user.get("user_name"));
         txt_email.setText(info_user.get("user_email"));
+        txt_phone.setText(info_user.get("user_phone"));
         String photo = info_user.get("user_photo");
         Picasso.get().load(photo).into(imv_photo);
 

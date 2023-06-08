@@ -66,4 +66,7 @@ dependencies {
 
     //Base de datos de Firebase
     implementation 'com.google.firebase:firebase-database'
+
+    //Mejora la imagen del perfil de usuario
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
