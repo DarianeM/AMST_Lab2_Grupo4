@@ -1,5 +1,8 @@
 plugins {
     id 'com.android.application'
+
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -61,5 +64,6 @@ dependencies {
     //Visualizar la imagen de perfil
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    //Base de datos de Firebase
     implementation 'com.google.firebase:firebase-database'
 }
